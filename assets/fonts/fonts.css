@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&family=Lato:wght@300;400;700&display=swap');
+
+/* TITULARES / BOTONES / LLAMADOS A LA ACCIÓN */
+h1, h2, h3, button, .cta, .menu-principal {
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  /* Open Sans para Cuerpo de texto, Formularios, Descripciones */
+  p, textarea {
+    font-family: 'Open Sans', sans-serif;
+  }
+  
+  /* Lato para Detalles suaves, Subtítulos, Apoyos visuales */
+  h3, h4, h6, .note{
+    font-family: 'Lato', sans-serif;
+  }
