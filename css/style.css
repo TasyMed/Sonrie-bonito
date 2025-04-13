@@ -1,0 +1,822 @@
+/* Mejoras para el header */
+.header {
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra sutil */
+  }
+  
+  #logo-header {
+    margin: 20px 0; /* Reducido margen vertical y quitado horizontal */
+    width: auto; /* Para mantener proporción */
+    height: 100px; /* Ligeramente más pequeño */
+  }
+
+  #menu {
+    background-color: white;
+    border: 1px solid #e1e1e1; /* Borde más sutil */
+    border-radius: 30px; /* Más redondeado */
+    padding: 10px 10px; /* Más padding para mejor aspecto */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05); /* Sombra sutil */
+  }
+  
+  .nav-link {
+    color: #437C90; /* Color corporativo para enlaces */
+    font-weight: 500; /* Semi-negrita */
+    padding: 8px 15px; /* Más área para clic */
+    transition: color 0.3s ease; /* Animación al hover */
+  }
+  
+  .nav-link:hover {
+    color: #0081B4; /* Color más oscuro al hover */
+    text-decoration: none;
+  }
+  
+  .separator {
+    color: #c4c4c4; /* Separador más sutil */
+    margin: 0 5px;
+  }
+  
+  #wa-buttom {
+    background-color: #25D366; /* Verde de WhatsApp */
+    border: none;
+    border-radius: 20px;
+    color: white;
+    font-weight: 600; /* Más negrita */
+    padding: 10px 30px; /* Más padding */
+    transition: all 0.3s ease; /* Animación */
+    text-transform: uppercase; /* Letras mayúsculas */
+    font-size: 0.9em; /* Ligeramente más pequeño */
+    letter-spacing: 0.5px; /* Espaciado entre letras */
+  }
+  
+  #wa-buttom:hover {
+    background-color: #128C7E; /* Verde más oscuro al hover */
+    transform: translateY(-2px); /* Efecto de elevación */
+    box-shadow: 0 4px 8px rgba(37, 211, 102, 0.3); /* Sombra con color */
+  }
+  
+  /* Media query para dispositivos móviles */
+  @media (max-width: 992px) {
+    .navbar-nav {
+      flex-direction: column !important;
+      gap: 10px !important;
+    }
+    
+    .separator {
+      display: none; /* Ocultar separadores en móvil */
+    }
+    
+    #logo-header {
+      height: 60px;
+      margin: 15px 0;
+    }
+    
+    #menu {
+      width: 100%;
+      padding: 8px 10px;
+    }
+  }
+
+  .nav-link.active {
+    color: #0081B4;
+    font-weight: 700;
+  }
+
+  /* Mejoras para la sección de copytext */
+#copytext {
+  position: relative;
+  overflow: hidden;
+}
+
+.back-img {
+  /* Reemplazar el padding excesivo con dimensiones más controladas */
+  padding: 0;
+  height: 600px; /* Altura fija más razonable */
+  width: 100%;
+  
+  /* Mejorar el manejo de la imagen de fondo */
+  background-image: url('/assets/img/copy-back-img.avif');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+  /* Añadir un overlay para mejorar legibilidad del texto */
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Overlay oscuro para mejorar contraste con el texto */
+.back-img::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.1); /* Overlay oscuro semi-transparente */
+}
+
+.back-img h2 {
+  color: white;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.4;
+  max-width: 800px;
+  padding: 20px;
+  position: relative; /* Para que esté por encima del overlay */
+  z-index: 1;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra para mejorar legibilidad */
+}
+
+.back-img h2 {
+    color: white;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.4;
+    max-width: 800px;
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    
+    /* Propiedades para la transición */
+    transition: all 0.3s ease;
+    cursor: pointer; /* Para indicar que es interactivo */
+  }
+  
+  /* Efecto al pasar el cursor */
+  .back-img h2:hover {
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+  }
+
+/* Estilos para la sección de problemas comunes */
+.problemas-comunes {
+    padding: 60px 0;
+    position: relative;
+  }
+  
+  /* Estilos para las cajas */
+  .caja {
+    height: 350px; /* Altura fija para hacer rectángulos verticales */
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 30px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Fondos de las cajas */
+  #caja-uno {
+    background-image: url('https://images.pexels.com/photos/3762408/pexels-photo-3762408.jpeg?auto=compress&cs=tinysrgb&w=600');
+    background-size: cover;
+    background-position: bottom;
+  }
+  
+  #caja-dos {
+    background-image: url('https://images.pexels.com/photos/3762402/pexels-photo-3762402.jpeg?auto=compress&cs=tinysrgb&w=600');
+    background-size: cover;
+    background-position: center;
+  }
+  
+  /* Overlay oscuro para mejorar legibilidad */
+  .caja::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.7));
+    z-index: 1;
+  }
+  
+  /* Contenido de las cajas */
+  .box {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px !important;
+    border: none !important;
+  }
+  
+  .box p {
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-align: center;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+    margin: 0;
+  }
+  
+  /* Efecto hover en las cajas */
+  .caja:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+  }
+  
+  /* Botón de WhatsApp centralizado */
+.whatsapp-button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+  
+  .whatsapp-button {
+    background-color: #25D366;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 15px 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .whatsapp-button:hover {
+    background-color: #128C7E;
+    transform: translateY(-3px);
+}
+  
+/* Estilos para la sección de servicios */
+#Servicios {
+    padding: 80px 0;
+    background-color: #f8f9fa;
+  }
+  
+  #Servicios h1 {
+    color: #0081B4;
+    font-weight: 600;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    position: relative;
+    display: inline-block;
+  }
+  
+  #Servicios h1:after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 3px;
+    background-color: #0081B4;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  /* Estilos para las tarjetas de servicios */
+  .card {
+    height: 400px; /* Tarjetas alargadas */
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    margin-bottom: 30px;
+    background: linear-gradient(to bottom, #ffffff, #f5f7fa);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow: hidden;
+  }
+  
+  .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 129, 180, 0.1);
+  }
+  
+  .card h2 {
+    color: #0081B4;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e0e6ed;
+  }
+  
+  .card h3 {
+    color: #5a6a85;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 15px;
+    transition: all 0.2s ease;
+  }
+  
+  .card h3:hover {
+    color: #0081B4;
+    transform: translateX(5px);
+  }
+  
+  /* Icono decorativo para cada tarjeta */
+  .card:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 80px;
+    height: 80px;
+    background-color: rgba(0, 129, 180, 0.05);
+    border-radius: 0 12px 0 80px;
+  }
+  
+  /* Botón de cotización */
+  .cotizacion-btn {
+    background-color: #0081B4;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 129, 180, 0.2);
+    margin-top: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  .cotizacion-btn:hover {
+    background-color: #006490;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 129, 180, 0.3);
+  }
+  
+  .cotizacion-btn i {
+    margin-right: 8px;
+  }
+  
+  /* Estilos para la sección "Por qué elegirnos" */
+#razon {
+    padding: 60px 0;
+    background-color: #f8f9fa;
+  }
+  
+  .razon-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #f8fbfd;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 6px 20px rgba(0, 129, 180, 0.08);
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(0, 129, 180, 0.1);
+  }
+  
+  .razon-container:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(to right, #0081B4, #25D366);
+  }
+  
+  .razon-title {
+    color: #0081B4;
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 25px;
+    position: relative;
+  }
+  
+  .razon-title:after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 2px;
+    background-color: #0081B4;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .razon-text {
+    color: #5a6a85;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+  }
+  
+  .razon-highlight {
+    font-weight: 600;
+    color: #0081B4;
+  }
+  
+  .razon-points {
+    text-align: left;
+    margin: 30px 0;
+    padding-left: 20px;
+  }
+  
+  .razon-point {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 15px;
+    font-size: 1.05rem;
+    color: #5a6a85;
+  }
+  
+  .razon-point:before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #25D366;
+    font-weight: bold;
+  }
+  
+  .razon-footer {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #0081B4;
+    margin-top: 20px;
+    font-style: italic;
+  }
+  
+ /* Estilos para la sección de Testimonios */
+#Testimonios {
+    background-color: #f9f9f9;
+    padding: 40px;
+}
+
+#Testimonios h1 {
+    color: #2c3e50;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-bottom: 40px;
+}
+
+/* Estilos para el carrusel */
+#testimoniosCarousel {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 60px; /* Espacio para los botones a los lados */
+}
+
+/* Estilos para las tarjetas de testimonios */
+#Testimonios .card {
+    border-radius: 8px;
+    border: 1px solid #eaeaea;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    background-color: white;
+    max-width: 90%;
+    margin: 0 auto;
+    transition: transform 0.3s;
+}
+
+#Testimonios .card:hover {
+    transform: translateY(-3px);
+}
+
+#Testimonios .card p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+    font-style: italic;
+}
+
+#Testimonios .card small {
+    color: #777;
+    display: block;
+    text-align: right;
+    margin-top: 15px;
+    font-weight: 500;
+}
+
+/* Estilos generales para la sección Nosotros */
+#Nosotros {
+    padding: 80px 0;
+    background-color: #f8fbff;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  #Nosotros h1 {
+    color: #1a5276;
+    font-weight: 700;
+    letter-spacing: 1px;
+    position: relative;
+  }
+  
+  #Nosotros h1:after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background-color: #3498db;
+    margin: 15px auto 0;
+  }
+  
+  #Nosotros h2 {
+    color: #2874a6;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+  }
+  
+  #Nosotros p {
+    color: #34495e;
+    line-height: 1.8;
+    text-align: justify;
+  }
+  
+  /* Estilos para las tarjetas */
+  #Nosotros .card {
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    height: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #dce7f2;
+    margin: 15px;
+  }
+  
+  #Nosotros .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.12);
+  }
+  
+  /* Estilos para la primera tarjeta con la imagen */
+  #Nosotros .col-md-6:first-child .card {
+    padding: 0 !important;
+    position: relative;
+    min-height: 450px;
+    background-image: url('https://images.pexels.com/photos/8376221/pexels-photo-8376221.jpeg?auto=compress&cs=tinysrgb&w=600');
+    background-size: cover;
+    background-position: center;
+ }
+  
+  /* Estilos para la segunda tarjeta */
+  #Nosotros .col-md-6:last-child .card {
+    padding: 30px !important;
+    border: 15px solid white;
+    background: linear-gradient(135deg, #ffffff, #f0f8ff);
+  }
+  
+  /* Estilos para el botón de contacto */
+  #Nosotros .btn-primary {
+    background-color: #1a5276;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 10px rgba(26, 82, 118, 0.3);
+    transition: all 0.3s ease;
+  }
+  
+  #Nosotros .btn-primary:hover {
+    background-color: #2874a6;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(26, 82, 118, 0.4);
+  }
+  
+  #Nosotros .btn-primary i {
+    margin-right: 8px;
+  }
+
+  #Nosotros .col-md-6:first-child .card:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.5) 100%);
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  #Nosotros .col-md-6:first-child .card:hover:before {
+    opacity: 1;
+  }
+
+  /* Estilos para la sección de contacto */
+#Contacto {
+    padding: 80px 0;
+    background-color: #f8f9fa;
+  }
+  
+  #Contacto h1 {
+    color: #0081B4;
+    font-weight: 600;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    position: relative;
+    display: inline-block;
+  }
+  
+  #Contacto h1:after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 3px;
+    background-color: #0081B4;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  /* Estilos para el mapa */
+  .map-container {
+    position: relative;
+    height: 100%;
+    min-height: 450px;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .map-iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 450px;
+    border: none;
+    border-radius: 15px;
+  }
+  
+  /* Estilos para las cajas de contacto */
+  .contact-box {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    margin-bottom: 25px;
+    padding: 30px !important;
+    transition: all 0.3s ease;
+    border-left: 4px solid #0081B4;
+  }
+  
+  .contact-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contact-box h2 {
+    color: #0081B4;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e0e6ed;
+    text-align: left;
+  }
+  
+  .contact-box p {
+    margin-bottom: 15px;
+    color: #5a6a85;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    text-align: left;
+  }
+  
+  .contact-box strong {
+    color: #333;
+    font-weight: 600;
+  }
+  
+  /* Info icons */
+  .contact-info-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 15px;
+  }
+  
+  .contact-icon {
+    color: #0081B4;
+    font-size: 1.2rem;
+    margin-right: 15px;
+    min-width: 20px;
+  }
+  
+  .contact-text {
+    flex: 1;
+  }
+  
+  /* Social media links */
+  .social-links {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+    justify-content: flex-start;
+  }
+  
+  .social-link {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #f0f5f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0081B4;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+  }
+  
+  .social-link:hover {
+    background-color: #0081B4;
+    color: white;
+    transform: translateY(-3px);
+  }
+  
+  /* CTA button */
+  .contact-cta {
+    margin-top: 30px;
+    text-align: left;
+  }
+  
+  .contact-btn {
+    background-color: #25D366;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 12px 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+  }
+  
+  .contact-btn:hover {
+    background-color: #128C7E;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+  }
+  
+  .contact-btn i {
+    margin-right: 8px;
+  }
+  
+  .footer {
+    background-color: black;
+  }
+
+  .footer {
+    background-color: #1a2234; /* Negro azulado elegante */
+    color: #ffffff;
+    padding: 40px 0 30px;
+    border-top: 5px solid #0081B4; /* Borde superior que conecta con la identidad visual */
+  }
+  
+  .footer-logo {
+    max-height: 70px;
+    margin-bottom: 15px;
+  }
+  
+  .footer-social {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .footer-social a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .footer-social a:hover {
+    background-color: #0081B4;
+    transform: translateY(-3px);
+  }
+  
+  .footer-social img {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .footer-copyright {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  /* Media queries para dispositivos móviles */
+
+  
