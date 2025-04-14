@@ -817,6 +817,149 @@
     color: rgba(255, 255, 255, 0.7);
   }
 
-  /* Media queries para dispositivos móviles */
+  /* Add a black background color to the top navigation */
+/* Estilos base para la barra de navegación */
+/* Estilos base para la barra de navegación */
+/* Estilos base para la barra de navegación */
+.topnav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f7f7f7;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(3, 3, 3, 0.3);
+  transition: all 0.3s ease;
+  overflow: hidden;
+  padding: 5px 10px;
+}
 
+/* Estilos para los enlaces */
+.topnav a {
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  border-radius: 10px;
+  margin: 8px;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+/* Estilos específicos para botón de WhatsApp */
+.wasa-nav {
+  background-color: #25D366;
+  color: white !important;
+  box-shadow: 0 4px 8px rgba(3, 3, 3, 0.2);
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  font-weight: 500;
+}
+
+/* Efectos hover para los enlaces */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+  transform: translateY(-2px);
+}
+
+.wasa-nav:hover {
+  background-color: #128C7E;
+  color: white !important;
+  transform: translateY(-2px);
+}
+
+/* Clase activa para la página actual */
+.topnav a.active {
+  color: white;
+  background-color: #333;
+}
+
+/* Ocultar el icono de menú en pantallas grandes */
+.topnav .icon {
+  display: none;
+}
+
+/* Media query para pantallas pequeñas - solo muestra el icono */
+@media screen and (max-width: 600px) {
+  .topnav {
+    justify-content: flex-end;
+    padding: 5px;
+    min-height: 50px;
+    background-color: transparent;
+    box-shadow: none;
+  }
   
+  .topnav a:not(.icon) {
+    display: none;
+  }
+  
+  .topnav a.icon {
+    float: right;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    margin: 0;
+    padding: 5px;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  }
+  
+  .topnav a.icon i, 
+  .topnav a.icon svg {
+    font-size: 24px;
+    width: 24px;
+    height: 24px;
+  }
+}
+
+/* Estilo para cuando el menú está abierto en modo responsivo */
+@media screen and (max-width: 600px) {
+  .topnav.responsive {
+    position: relative;
+    flex-direction: column;
+    align-items: stretch;
+    border-radius: 15px;
+    padding-top: 50px;
+    padding-bottom: 10px;
+    background-color: #f7f7f7;
+    box-shadow: 0 4px 8px rgba(3, 3, 3, 0.3);
+  }
+  
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background-color: #e0e0e0;
+  }
+  
+  .topnav.responsive a {
+    display: flex;
+    text-align: left;
+    width: auto;
+    margin: 5px 10px;
+    padding: 5px;
+    border-radius: 8px;
+    border: none;
+    animation: fadeIn 0.3s ease forwards;
+  }
+  
+  .topnav.responsive .wasa-nav {
+    margin-bottom: 10px;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
